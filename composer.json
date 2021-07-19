@@ -1,0 +1,25 @@
+{
+  "name": "drinks-it/sf-cache-client",
+  "description": "StoreFront Cache Super Slim Client.",
+  "type": "library",
+  "require": {
+    "php": "^7.4 || ^8.0"
+  },
+  "require-dev": {
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "DrinksIt\\SfCacheClient\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "maxim.gubar",
+      "email": "max@drink.ch"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  }
+}
