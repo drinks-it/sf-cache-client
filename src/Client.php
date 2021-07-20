@@ -29,6 +29,11 @@ class Client
             'User-Agent: Micro Cache Client'
         ];
 
+        $basicAuthToken = $this->config->getBasicAuthToken();
+        if ($basicAuthToken) {
+            $headers[] = 'Authorization: Basic ' . $basicAuthToken;
+        }
+
         $context = stream_context_create([
             'http' => [
                 'method' => 'POST',
