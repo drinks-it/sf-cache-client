@@ -34,7 +34,11 @@ class Client
                 'method' => 'POST',
                 'header' => $headers,
                 'content' => $data,
-            ]
+            ],
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+            ],
         ]);
 
         if (false === $data = @file_get_contents($this->config->getFlushCacheUrl(), false, $context)) {
